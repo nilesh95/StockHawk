@@ -9,9 +9,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.support.annotation.NonNull;
+import android.support.v4.app.TaskStackBuilder;
 import android.widget.RemoteViews;
 
 import com.sam_chordas.android.stockhawk.R;
+import com.sam_chordas.android.stockhawk.ui.line_graph;
 
 /**
  * Created by NILESH on 24-07-2016.
@@ -34,11 +36,11 @@ public class QuoteWidgetProvider extends AppWidgetProvider {
 
         views.setEmptyView(R.id.widget_list, R.id.empty_view);
 
-//        final Intent openAppIntent = new Intent(context, LineChartActivity.class);
-//        PendingIntent openAppPendingIntent = TaskStackBuilder.create(context)
-//                .addNextIntentWithParentStack(openAppIntent)
-//                .getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
-//        views.setPendingIntentTemplate(R.id.widget_list, openAppPendingIntent);
+        final Intent openAppIntent = new Intent(context, line_graph.class);
+        PendingIntent openAppPendingIntent = TaskStackBuilder.create(context)
+                .addNextIntentWithParentStack(openAppIntent)
+                .getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
+        views.setPendingIntentTemplate(R.id.widget_list, openAppPendingIntent);
 
         // Set up the collection
 
