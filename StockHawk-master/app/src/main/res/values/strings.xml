@@ -13,7 +13,8 @@
   <string name="stock_empty">No stocks!!</string>
   <string name="widget_title">Market Stats</string>
   <string name="refreshbtn">Refresh Button</string>
-
+  <string name="stock_error">No Stock Found</string>
+  <string name="stock_present">Stock Already There</string>
 
 
   <string name="google_app_id" translatable="false">gcmlearning-1290</string>
