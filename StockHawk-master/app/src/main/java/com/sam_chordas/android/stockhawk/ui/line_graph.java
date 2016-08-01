@@ -38,7 +38,7 @@ public class line_graph extends ActionBarActivity {
         Intent i = getIntent();
         String sym = i.getStringExtra("symbol");
 
-        String query = "select * from yahoo.finance.historicaldata where symbol ='" + sym + "' and startDate = '2016-01-01' and endDate = '2016-01-24'";
+         String query = "select * from yahoo.finance.historicaldata where symbol ='" + sym + "' and startDate = '2016-01-01' and endDate = '2016-01-24'";
 
         uri = Uri.parse("https://query.yahooapis.com/v1/public/yql").buildUpon().appendQueryParameter("q", query).appendQueryParameter("format","json").
                 appendQueryParameter("diagnostics","true").appendQueryParameter("env","store://datatables.org/alltableswithkeys").appendQueryParameter("callback","").build();
